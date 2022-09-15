@@ -4,7 +4,7 @@ import { StyleSheet, Text, View, Button, TextInput } from 'react-native';
 export default function App() {
 
   const [enteredGoalText, setEnteredGoalText] = useState('')
-  const [myGoals, setMyGoals] = useState([])
+  const [courseGoals] = useState([])
 
   function goalInputHandler(enteredText) {
     setEnteredGoalText(enteredText)
@@ -12,8 +12,7 @@ export default function App() {
   }
 
   function addGoalHandler() {
-    // console.log(enteredGoalText)
-    setMyGoals(currentGoals => [...currentGoals, enteredGoalText])
+    console.log(enteredGoalText)
   }
 
   return (

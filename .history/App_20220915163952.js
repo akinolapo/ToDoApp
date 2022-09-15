@@ -13,7 +13,6 @@ export default function App() {
 
   function addGoalHandler() {
     // console.log(enteredGoalText)
-    setMyGoals(currentGoals => [...currentGoals, enteredGoalText])
   }
 
   return (
