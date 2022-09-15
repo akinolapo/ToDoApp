@@ -13,7 +13,7 @@ export default function App() {
 
   function addGoalHandler() {
     // console.log(enteredGoalText)
-    setMyGoals(currentGoals => [...currentGoals, { text: enteredGoalText, id: Math.random().toString() },])
+    setMyGoals(currentGoals => [...currentGoals, {text: enteredGoalText, id: Math.random().toString()},])
   }
 
   return (
@@ -23,15 +23,13 @@ export default function App() {
         <Button title='Add Goal' onPress={addGoalHandler} />
       </View>
       <View style={styles.goalsContainer}>
-        <FlatList data={myGoals} renderItem={itemData => {
-          return (
+      <FlatList data={myGoals} renderItem={itemData => {
+        return(
             <View style={styles.goalItems}>
               <Text style={styles.goalText}>{itemData.item.text}</Text>
             </View>
-          )
-        }} keyExtractor={(item, index) => {
-          return item.id
-        }} alwaysBounceVertical={false} />
+        )
+      }} keyExtractor={(item, index) => {}} alwaysBounceVertical={false}/>
       </View>
     </View>
   );
