@@ -2,7 +2,7 @@ import { StyleSheet, Text, View, Button, TextInput } from 'react-native';
 
 export default function App() {
   function goalInputHandler(enteredText) {
-    // console.log(enteredText)
+    console.log(enteredText)
   }
 
   function addGoalHandler() {}
@@ -10,7 +10,7 @@ export default function App() {
     <View style={styles.appContainer}>
       <View style={styles.inputContainer}>
         <TextInput style={styles.textInput} placeholder='Your course goal!' onChangeText={goalInputHandler} />
-        <Button title='Add Goal' onPress={addGoalHandler} />
+        <Button title='Add Goal' />
       </View>
       <View style={styles.goalsContainer}>
         <Text>List of goals...</Text>
