@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { StyleSheet, Text, View, Button, TextInput, ScrollView, FlatList } from 'react-native';
+import { StyleSheet, Text, View, Button, TextInput, ScrollView } from 'react-native';
 
 export default function App() {
 
@@ -22,15 +22,14 @@ export default function App() {
         <TextInput style={styles.textInput} placeholder='Your course goal!' onChangeText={goalInputHandler} />
         <Button title='Add Goal' onPress={addGoalHandler} />
       </View>
-      <View style={styles.goalsContainer}>
-      <FlatList data={myGoals} renderItem={itemData => {
-        return(
-            <View style={styles.goalItems}>
-              <Text style={styles.goalText}>{itemData.item}</Text>
-            </View>
-        )
-      }} alwaysBounceVertical={false}/>
-      </View>
+      
+      <ScrollView>
+        {myGoals.map((goal) =>
+          <View style={styles.goalItems} key={goal}>
+            <Text style={styles.goalText}>{goal}</Text>
+          </View>
+        )}
+      </ScrollView>
     </View>
   );
 }

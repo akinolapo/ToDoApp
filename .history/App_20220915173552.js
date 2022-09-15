@@ -23,11 +23,9 @@ export default function App() {
         <Button title='Add Goal' onPress={addGoalHandler} />
       </View>
       <View style={styles.goalsContainer}>
-      <FlatList data={myGoals} renderItem={itemData => {
+      <FlatList data={myGoals} renderItem={item => {
         return(
-            <View style={styles.goalItems}>
-              <Text style={styles.goalText}>{itemData.item}</Text>
-            </View>
+          
         )
       }} alwaysBounceVertical={false}/>
       </View>

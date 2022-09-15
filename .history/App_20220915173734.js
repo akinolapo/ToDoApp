@@ -24,9 +24,10 @@ export default function App() {
       </View>
       <View style={styles.goalsContainer}>
       <FlatList data={myGoals} renderItem={itemData => {
+        ite
         return(
-            <View style={styles.goalItems}>
-              <Text style={styles.goalText}>{itemData.item}</Text>
+            <View style={styles.goalItems} key={goal}>
+              <Text style={styles.goalText}>{goal}</Text>
             </View>
         )
       }} alwaysBounceVertical={false}/>
