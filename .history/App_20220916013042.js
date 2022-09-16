@@ -13,7 +13,7 @@ export default function App() {
   }
 
   function deleteGoalHandler() {
-    console.log('delete')
+    console.log(delete')
   }
 
   return (
@@ -21,7 +21,7 @@ export default function App() {
       <GoalInput onAddGoal={addGoalHandler}/>
       <View style={styles.goalsContainer}>
         <FlatList data={myGoals} renderItem={itemData => {
-          return <GoalItem text={itemData.item.text} onDeleteItem={deleteGoalHandler}/>
+          return <GoalItem text={itemData.item.text}/>
         }} keyExtractor={(item, index) => {
           return item.id
         }} alwaysBounceVertical={false} />
