@@ -5,7 +5,9 @@ import GoalItem from './components/GoalItem';
 
 export default function App() {
 
+
   const [myGoals, setMyGoals] = useState([])
+
 
   function addGoalHandler(enteredGoalText) {
     // console.log(enteredGoalText)
