@@ -45,16 +45,16 @@ const styles = StyleSheet.create({
     textInput: {
         borderWidth: 1,
         borderColor: '#cccccc',
-        width: '100%',
+        width: '70%',
         marginRight: 8,
         padding: 8
     },
     buttonContainer: {
         flexDirection: 'row',
-        marginTop: 16,
+        mar
     },
     button: {
         width: 100,
-        marginHorizontal: 8,
+        marginHorizontal: 8
     }
 })

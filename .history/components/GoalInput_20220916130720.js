@@ -7,26 +7,21 @@ function GoalInput(props) {
     function goalInputHandler(enteredText) {
         setEnteredGoalText(enteredText)
         // console.log(enteredText)
-    }
-
-    function addGoalHandler() {
+      }
+    
+    function addGoalHandler(){
         props.onAddGoal(enteredGoalText)
         setEnteredGoalText('')
     }
-
+    
     return (
         <Modal visible={props.visible} animationType="slide">
-            <View style={styles.inputContainer}>
-                <TextInput style={styles.textInput} placeholder='Your course goal!' onChangeText={goalInputHandler} value={enteredGoalText} />
-                <View style={styles.buttonContainer}>
-                    <View style={styles.button}>
-                    <Button title='Add Task' onPress={addGoalHandler} />
-                    </View>
-                    <View style={styles.button}>
-                    <Button title='Cancel'/>
-                    </View>
-                </View>
+        <View style={styles.inputContainer}>
+            <TextInput style={styles.textInput} placeholder='Your course goal!' onChangeText={goalInputHandler} value={enteredGoalText} />
+            <View>
+            <Button title='Add Goal' onPress={addGoalHandler} />
             </View>
+        </View>
         </Modal>
     )
 }
@@ -36,25 +31,18 @@ export default GoalInput;
 const styles = StyleSheet.create({
     inputContainer: {
         flex: 1,
-        justifyContent: 'center',
+        flexDirection: 'row',
+        justifyContent: 'space-between',
         alignItems: 'center',
         marginBottom: 24,
         borderBottomWidth: 1,
         borderBottomColor: '#cccccc'
-    },
-    textInput: {
+      },
+      textInput: {
         borderWidth: 1,
         borderColor: '#cccccc',
-        width: '100%',
+        width: '70%',
         marginRight: 8,
         padding: 8
-    },
-    buttonContainer: {
-        flexDirection: 'row',
-        marginTop: 16,
-    },
-    button: {
-        width: 100,
-        marginHorizontal: 8,
-    }
+      },
 })

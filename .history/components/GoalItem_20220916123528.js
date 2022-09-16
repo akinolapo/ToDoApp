@@ -19,7 +19,7 @@ const styles = StyleSheet.create({
         backgroundColor: '#5e0acc',
     },
     pressedItem: {
-        color: '#210644'
+        
     },
     goalText: {
         color: 'white',
