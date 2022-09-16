@@ -24,7 +24,7 @@ export default function App() {
       <GoalInput onAddGoal={addGoalHandler}/>
       <View style={styles.goalsContainer}>
         <FlatList data={myGoals} renderItem={itemData => {
-          return <GoalItem text={itemData.item.text} id={itemData.item.id} onDeleteItem={deleteGoalHandler}/>
+          return <GoalItem text={itemData.item.text} id={item} onDeleteItem={deleteGoalHandler}/>
         }} keyExtractor={(item, index) => {
           return item.id
         }} alwaysBounceVertical={false} />
