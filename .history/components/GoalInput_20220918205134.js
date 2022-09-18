@@ -47,7 +47,7 @@ const styles = StyleSheet.create({
     },
     image: {
         width: 150,
-        height: 150,
+        height: 250,
         margin: 20
     },
     textInput: {

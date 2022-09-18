@@ -46,9 +46,9 @@ const styles = StyleSheet.create({
         backgroundColor: '#311b6b'
     },
     image: {
-        width: 150,
-        height: 150,
-        margin: 20
+        width: 200,
+        height: 200,
+        // margin: 20
     },
     textInput: {
         borderWidth: 1,
