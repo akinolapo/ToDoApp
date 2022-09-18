@@ -18,17 +18,14 @@ function GoalInput(props) {
         <Modal visible={props.visible} animationType="slide">
             <View style={styles.inputContainer}>
               <Image style={styles.image} source={require('../assets/images/goal.png')}/>
-                <TextInput style={styles.textInput} placeholder='Enter task here' onChangeText={goalInputHandler} value={enteredGoalText} />
+                <TextInput style={styles.textInput} placeholder='Your Task!' onChangeText={goalInputHandler} value={enteredGoalText} />
                 <View style={styles.buttonContainer}>
-
-                     <View style={styles.button}>
-                    <Button title='Cancel' onPress={props.onCancel} color="#f31282"
-                    />
+                    <View style={styles.button}>
+                    <Button title='Add Task' onPress={addGoalHandler} color="" />
                     </View>
                     <View style={styles.button}>
-                    <Button title='Add Task' onPress={addGoalHandler} color="#b180f0" />
+                    <Button title='Cancel' onPress={props.onCancel}/>
                     </View>
-                   
                 </View>
             </View>
         </Modal>
@@ -52,13 +49,10 @@ const styles = StyleSheet.create({
     },
     textInput: {
         borderWidth: 1,
-        borderColor: '#e4d0ff',
-        backgroundColor: '#e4d0ff',
-        color: "#120438",
-        borderRadius: 6,
+        borderColor: '#cccccc',
         width: '100%',
-        // marginRight: 8,
-        padding: 16
+        marginRight: 8,
+        padding: 8
     },
     buttonContainer: {
         flexDirection: 'row',

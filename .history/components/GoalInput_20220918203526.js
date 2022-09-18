@@ -21,10 +21,7 @@ function GoalInput(props) {
                 <TextInput style={styles.textInput} placeholder='Enter task here' onChangeText={goalInputHandler} value={enteredGoalText} />
                 <View style={styles.buttonContainer}>
 
-                     <View style={styles.button}>
-                    <Button title='Cancel' onPress={props.onCancel} color="#f31282"
-                    />
-                    </View>
+                    
                     <View style={styles.button}>
                     <Button title='Add Task' onPress={addGoalHandler} color="#b180f0" />
                     </View>

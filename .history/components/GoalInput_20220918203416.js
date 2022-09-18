@@ -20,15 +20,13 @@ function GoalInput(props) {
               <Image style={styles.image} source={require('../assets/images/goal.png')}/>
                 <TextInput style={styles.textInput} placeholder='Enter task here' onChangeText={goalInputHandler} value={enteredGoalText} />
                 <View style={styles.buttonContainer}>
-
-                     <View style={styles.button}>
-                    <Button title='Cancel' onPress={props.onCancel} color="#f31282"
-                    />
-                    </View>
                     <View style={styles.button}>
                     <Button title='Add Task' onPress={addGoalHandler} color="#b180f0" />
                     </View>
-                   
+                    <View style={styles.button}>
+                    <Button title='Cancel' onPress={props.onCancel} color="#f31282"
+                    />
+                    </View>
                 </View>
             </View>
         </Modal>
@@ -58,7 +56,7 @@ const styles = StyleSheet.create({
         borderRadius: 6,
         width: '100%',
         // marginRight: 8,
-        padding: 16
+        padding: 8
     },
     buttonContainer: {
         flexDirection: 'row',
