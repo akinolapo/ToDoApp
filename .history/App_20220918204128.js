@@ -33,8 +33,6 @@ export default function App() {
   }
 
   return (
-    <>
-    <StatusBar style='light'/>
     <View style={styles.appContainer}>
       <Button title='Add New Task' color="#a065ec" onPress={startAddGoalHandler}/>
       <GoalInput visible={modalIsVisible} onAddGoal={addGoalHandler} onCancel={endAddGoalHandler}/>
@@ -46,7 +44,6 @@ export default function App() {
         }} alwaysBounceVertical={false} />
       </View>
     </View>
-    </>
   );
 }
 
